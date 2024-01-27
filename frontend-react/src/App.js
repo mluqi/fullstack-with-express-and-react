@@ -12,12 +12,12 @@ function App() {
     <div>
       <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
         <Container>
-          <Navbar.Brand to="/">Expressjs + reactjs</Navbar.Brand>
+          <Navbar.Brand to="/">FITO MUSIK</Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='me-auto'>
               <Nav.Link as={Link} to='/' className='nav-link'>HOME</Nav.Link>
-              <Nav.Link as={Link} to='/posts' className='nav-link'>POSTS</Nav.Link>
+              <Nav.Link as={Link} to='/posts' className='nav-link'>LIST BARANG DAN STOK</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
