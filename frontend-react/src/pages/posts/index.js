@@ -17,7 +17,14 @@ function PostIndex(){
         const data = await response.data.data;
         
         setPosts(data);
-    }
+    };
+
+    const deletePost = async (id) => {
+        // eslint-disable-next-line no-template-curly-in-string
+        await axios.delete(`http://localhost:3001/api/posts/delete/${id}`);
+
+        fectData();
+    };
 
     return(
         <Container className='mt-3'>
@@ -42,6 +49,7 @@ function PostIndex(){
                                         <td>{ post.content }</td>
                                         <td className='text-center'>
                                             <Button as={Link} to={`/posts/edit/${post.id}`} variant='primary' size='sm' className='me-2'>EDIT</Button>
+                                            <Button onClick={() => deletePost(post.id)} variant='danger' size='sm'>DELETE</Button>
                                         </td>
                                     </tr>
                                 ))}
